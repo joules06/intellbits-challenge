@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D32ADC52906E1DA0069C67C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32ADC42906E1DA0069C67C /* Array.swift */; };
+		7D32ADC72906F2E30069C67C /* APIClientHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32ADC62906F2E30069C67C /* APIClientHelpers.swift */; };
+		7D826F3929045BE400ADBDCB /* FlickerImages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB82848290220B6006AA7BD /* FlickerImages.framework */; };
+		7D826F3A29045BE400ADBDCB /* FlickerImages.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB82848290220B6006AA7BD /* FlickerImages.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D826F3F29045D0F00ADBDCB /* Prototypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D826F3E29045D0F00ADBDCB /* Prototypes.swift */; };
+		7D826F41290461E000ADBDCB /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D826F40290461E000ADBDCB /* UIView.swift */; };
 		8E7B646129036C94003D2DB9 /* FlickerImageMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B646029036C94003D2DB9 /* FlickerImageMapper.swift */; };
 		8E7B646329036E26003D2DB9 /* RemoteFlickerFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B646229036E26003D2DB9 /* RemoteFlickerFeedLoader.swift */; };
 		8E7B646929037C12003D2DB9 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B646829037C12003D2DB9 /* GlobalVariables.swift */; };
@@ -33,6 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7D826F3B29045BE400ADBDCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EB8280429021878006AA7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EB82847290220B6006AA7BD;
+			remoteInfo = FlickerImages;
+		};
 		8EB828232902187A006AA7BD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8EB8280429021878006AA7BD /* Project object */;
@@ -56,7 +69,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7D826F3D29045BE400ADBDCB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7D826F3A29045BE400ADBDCB /* FlickerImages.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7D32ADC42906E1DA0069C67C /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		7D32ADC62906F2E30069C67C /* APIClientHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientHelpers.swift; sourceTree = "<group>"; };
+		7D826F3E29045D0F00ADBDCB /* Prototypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prototypes.swift; sourceTree = "<group>"; };
+		7D826F40290461E000ADBDCB /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		8E7B646029036C94003D2DB9 /* FlickerImageMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerImageMapper.swift; sourceTree = "<group>"; };
 		8E7B646229036E26003D2DB9 /* RemoteFlickerFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFlickerFeedLoader.swift; sourceTree = "<group>"; };
 		8E7B646829037C12003D2DB9 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
@@ -92,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D826F3929045BE400ADBDCB /* FlickerImages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +159,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D826F3829045BE400ADBDCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8E7B646429037B49003D2DB9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				8E7B646D29038036003D2DB9 /* FlickrCollectionViewCell.swift */,
+				7D32ADC62906F2E30069C67C /* APIClientHelpers.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -157,6 +197,7 @@
 			children = (
 				8E7B646F290380EB003D2DB9 /* Extension */,
 				8E7B646829037C12003D2DB9 /* GlobalVariables.swift */,
+				7D826F3E29045D0F00ADBDCB /* Prototypes.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -173,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				8E7B6470290380FE003D2DB9 /* UIImageView+URL.swift */,
+				7D826F40290461E000ADBDCB /* UIView.swift */,
+				7D32ADC42906E1DA0069C67C /* Array.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -194,6 +237,7 @@
 				8EB82849290220B6006AA7BD /* FlickerImages */,
 				8EB82853290220B6006AA7BD /* FlickerImagesTests */,
 				8EB8280D29021879006AA7BD /* Products */,
+				7D826F3829045BE400ADBDCB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -301,12 +345,16 @@
 				8EB8280829021879006AA7BD /* Sources */,
 				8EB8280929021879006AA7BD /* Frameworks */,
 				8EB8280A29021879006AA7BD /* Resources */,
+				7D826F3D29045BE400ADBDCB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7D826F3C29045BE400ADBDCB /* PBXTargetDependency */,
 			);
 			name = IntellBitsChallenge;
+			packageProductDependencies = (
+			);
 			productName = IntellBitsChallenge;
 			productReference = 8EB8280C29021879006AA7BD /* IntellBitsChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -422,6 +470,8 @@
 				Base,
 			);
 			mainGroup = 8EB8280329021878006AA7BD;
+			packageReferences = (
+			);
 			productRefGroup = 8EB8280D29021879006AA7BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -481,10 +531,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D32ADC52906E1DA0069C67C /* Array.swift in Sources */,
+				7D826F41290461E000ADBDCB /* UIView.swift in Sources */,
+				7D826F3F29045D0F00ADBDCB /* Prototypes.swift in Sources */,
 				8E7B646E29038036003D2DB9 /* FlickrCollectionViewCell.swift in Sources */,
 				8EB8281429021879006AA7BD /* ViewController.swift in Sources */,
 				8E7B6471290380FE003D2DB9 /* UIImageView+URL.swift in Sources */,
 				8EB8281029021879006AA7BD /* AppDelegate.swift in Sources */,
+				7D32ADC72906F2E30069C67C /* APIClientHelpers.swift in Sources */,
 				8E7B646929037C12003D2DB9 /* GlobalVariables.swift in Sources */,
 				8EB8281229021879006AA7BD /* SceneDelegate.swift in Sources */,
 			);
@@ -534,6 +588,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7D826F3C29045BE400ADBDCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EB82847290220B6006AA7BD /* FlickerImages */;
+			targetProxy = 7D826F3B29045BE400ADBDCB /* PBXContainerItemProxy */;
+		};
 		8EB828242902187A006AA7BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8EB8280B29021879006AA7BD /* IntellBitsChallenge */;
@@ -836,6 +895,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -869,6 +929,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

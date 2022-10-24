@@ -7,6 +7,23 @@
 
 import Foundation
 
+public struct FlickerImagesDataModel: Equatable {
+    public let page: Int
+    public let pages: Int
+    public let perPage: Int
+    public let total: Int
+    public let photo: [FlickerImage]
+    
+    public init(page: Int, pages: Int, perPage: Int, total: Int, photo: [FlickerImage]) {
+        self.page = page
+        self.pages = pages
+        self.perPage = perPage
+        self.total = total
+        self.photo = photo
+    }
+}
+
+
 public struct FlickerImage: Equatable {
     public let id: String
     public let owner: String
@@ -28,6 +45,6 @@ public struct FlickerImage: Equatable {
 
 extension FlickerImage {
     public func imageURL(imageSize: FlickImageSizes) -> String {
-        "\(K.FLICKR_IMAGE_PREFIX)/\(server)/\(id)_\(K.FLICKR_API)_\(imageSize.rawValue).jpg"
+        "\(K.FLICKR_IMAGE_PREFIX)\(server)/\(id)_\(secret)_\(imageSize.rawValue).jpg"
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol FeedLoader {
-    typealias Result = Swift.Result<[FlickerImage], Error>
+    typealias Result = Swift.Result<FlickerImagesDataModel, Error>
     
     func load(completion: @escaping (Result) -> Void)
 }

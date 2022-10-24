@@ -23,8 +23,7 @@ public final class RemoteFlickerFeedLoader: FeedLoader {
     }
     
     public func load(completion: @escaping (Result) -> Void) {
-        client.get(from: url) { [weak self] result in
-            guard self != nil else { return }
+        client.get(from: url) { result in
             switch result {
             case let .success((data, response)):
                 completion(RemoteFlickerFeedLoader.map(data, from: response))
@@ -36,11 +35,17 @@ public final class RemoteFlickerFeedLoader: FeedLoader {
     
     private static func map(_ data: Data, from response: HTTPURLResponse) -> Result {
         do {
-            let items = try FlickerImageMapper.map(data, from: response)
-            return .success(items.toModels())
+            let item = try FlickerImageMapper.map(data, from: response)
+            return .success(item.toModel())
         } catch {
             return .failure(error)
         }
+    }
+}
+
+extension RemoteFlickerImagesDataModel {
+    func toModel() -> FlickerImagesDataModel {
+        FlickerImagesDataModel(page: self.page, pages: self.pages, perPage: self.perPage, total: self.total, photo: self.photo.toModels())
     }
 }
 

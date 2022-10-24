@@ -12,17 +12,18 @@ final class EssentialFeedAPIEndToEndTests: XCTestCase {
     func test_endToEndTestServerGETFeedResult_matchesFixedTestAccountData() {
         switch getFeedResult() {
         case let .success(imageFeed)?:
-            XCTAssertEqual(imageFeed.count, 10, "Expected 8 images in the test account feed")
-            XCTAssertEqual(imageFeed[0], expectedImage(at: 0))
-            XCTAssertEqual(imageFeed[1], expectedImage(at: 1))
-            XCTAssertEqual(imageFeed[2], expectedImage(at: 2))
-            XCTAssertEqual(imageFeed[3], expectedImage(at: 3))
-            XCTAssertEqual(imageFeed[4], expectedImage(at: 4))
-            XCTAssertEqual(imageFeed[5], expectedImage(at: 5))
-            XCTAssertEqual(imageFeed[6], expectedImage(at: 6))
-            XCTAssertEqual(imageFeed[7], expectedImage(at: 7))
-            XCTAssertEqual(imageFeed[8], expectedImage(at: 8))
-            XCTAssertEqual(imageFeed[9], expectedImage(at: 9))
+            
+            XCTAssertEqual(imageFeed.photo.count, 10, "Expected 8 images in the test account feed")
+            XCTAssertEqual(imageFeed.photo[0], expectedImage(at: 0))
+            XCTAssertEqual(imageFeed.photo[1], expectedImage(at: 1))
+            XCTAssertEqual(imageFeed.photo[2], expectedImage(at: 2))
+            XCTAssertEqual(imageFeed.photo[3], expectedImage(at: 3))
+            XCTAssertEqual(imageFeed.photo[4], expectedImage(at: 4))
+            XCTAssertEqual(imageFeed.photo[5], expectedImage(at: 5))
+            XCTAssertEqual(imageFeed.photo[6], expectedImage(at: 6))
+            XCTAssertEqual(imageFeed.photo[7], expectedImage(at: 7))
+            XCTAssertEqual(imageFeed.photo[8], expectedImage(at: 8))
+            XCTAssertEqual(imageFeed.photo[9], expectedImage(at: 9))
             
         case let .failure(error)?:
             XCTFail("Expected successful feed result, got \(error) instead")
